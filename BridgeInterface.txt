@@ -1,27 +1,307 @@
-auto vmbr1
+auto vmbr11
 iface vmbr1 inet manual
         bridge-ports none
         bridge-stp off
         bridge-fd 0
 #ISP-HQ-R
 
-auto vmbr2
+auto vmbr12
 iface vmbr2 inet manual
         bridge-ports none
         bridge-stp off
         bridge-fd 0
 #ISP-BR-R
 
-auto vmbr3
+auto vmbr13
 iface vmbr3 inet manual
         bridge-ports none
         bridge-stp off
         bridge-fd 0
-#HQ-R-HQ-SW
+#HQ-R-HQ-SRV
 
-auto vmbr4
+auto vmbr14
 iface vmbr4 inet manual
         bridge-ports none
         bridge-stp off
         bridge-fd 0
-#BR-R-BR-SW
+#BR-R-BR-SRV
+
+auto vmbr21
+iface vmbr1 inet manual
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+#ISP-HQ-R
+
+auto vmbr22
+iface vmbr2 inet manual
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+#ISP-BR-R
+
+auto vmbr23
+iface vmbr3 inet manual
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+#HQ-R-HQ-SRV
+
+auto vmbr24
+iface vmbr4 inet manual
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+#BR-R-BR-SRV
+
+auto vmbr11
+iface vmbr1 inet manual
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+#ISP-HQ-R
+
+auto vmbr32
+iface vmbr2 inet manual
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+#ISP-BR-R
+
+auto vmbr33
+iface vmbr3 inet manual
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+#HQ-R-HQ-SRV
+
+auto vmbr34
+iface vmbr4 inet manual
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+#BR-R-BR-SRV
+
+auto vmbr41
+iface vmbr1 inet manual
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+#ISP-HQ-R
+
+auto vmbr42
+iface vmbr2 inet manual
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+#ISP-BR-R
+
+auto vmbr43
+iface vmbr3 inet manual
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+#HQ-R-HQ-SRV
+
+auto vmbr44
+iface vmbr4 inet manual
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+#BR-R-BR-SRV
+
+auto vmbr11
+iface vmbr1 inet manual
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+#ISP-HQ-R
+
+auto vmbr12
+iface vmbr2 inet manual
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+#ISP-BR-R
+
+auto vmbr13
+iface vmbr3 inet manual
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+#HQ-R-HQ-SRV
+
+auto vmbr14
+iface vmbr4 inet manual
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+#BR-R-BR-SRV
+
+auto vmbr11
+iface vmbr1 inet manual
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+#ISP-HQ-R
+
+auto vmbr12
+iface vmbr2 inet manual
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+#ISP-BR-R
+
+auto vmbr13
+iface vmbr3 inet manual
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+#HQ-R-HQ-SRV
+
+auto vmbr14
+iface vmbr4 inet manual
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+#BR-R-BR-SRV
+
+auto vmbr11
+iface vmbr1 inet manual
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+#ISP-HQ-R
+
+auto vmbr12
+iface vmbr2 inet manual
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+#ISP-BR-R
+
+auto vmbr13
+iface vmbr3 inet manual
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+#HQ-R-HQ-SRV
+
+auto vmbr14
+iface vmbr4 inet manual
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+#BR-R-BR-SRV
+
+auto vmbr11
+iface vmbr1 inet manual
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+#ISP-HQ-R
+
+auto vmbr12
+iface vmbr2 inet manual
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+#ISP-BR-R
+
+auto vmbr13
+iface vmbr3 inet manual
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+#HQ-R-HQ-SRV
+
+auto vmbr14
+iface vmbr4 inet manual
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+#BR-R-BR-SRV
+
+auto vmbr11
+iface vmbr1 inet manual
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+#ISP-HQ-R
+
+auto vmbr12
+iface vmbr2 inet manual
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+#ISP-BR-R
+
+auto vmbr13
+iface vmbr3 inet manual
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+#HQ-R-HQ-SRV
+
+auto vmbr14
+iface vmbr4 inet manual
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+#BR-R-BR-SRV
+
+auto vmbr11
+iface vmbr1 inet manual
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+#ISP-HQ-R
+
+auto vmbr12
+iface vmbr2 inet manual
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+#ISP-BR-R
+
+auto vmbr13
+iface vmbr3 inet manual
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+#HQ-R-HQ-SRV
+
+auto vmbr14
+iface vmbr4 inet manual
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+#BR-R-BR-SRV
+
+auto vmbr11
+iface vmbr1 inet manual
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+#ISP-HQ-R
+
+auto vmbr12
+iface vmbr2 inet manual
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+#ISP-BR-R
+
+auto vmbr13
+iface vmbr3 inet manual
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+#HQ-R-HQ-SRV
+
+auto vmbr14
+iface vmbr4 inet manual
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+#BR-R-BR-SRV
