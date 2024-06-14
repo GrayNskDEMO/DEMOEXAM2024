@@ -29,13 +29,13 @@ echo "BR-R is done!!!"
 qm create 104 --name "HQ-SRV" --cores 2 --memory 4096 --ostype l26 --scsihw virtio-scsi-single  --net0 virtio,bridge=vmbr7
 qm importdisk 101 ISP-disk001.vmdk $STORAGE --format qcow2
 qm set 101 -ide0 $STORAGE:101/vm-101-disk-0.qcow2 --boot order=ide0
-echo "ISP is done!!!"
+echo "HQ-SRV is done!!!"
 qm create 101 --name "BR-SRV" --cores 2 --memory 4096 --ostype l26 --scsihw virtio-scsi-single  --net0 virtio,bridge=vmbr7
 qm importdisk 101 ISP-disk001.vmdk $STORAGE --format qcow2
 qm set 101 -ide0 $STORAGE:101/vm-101-disk-0.qcow2 --boot order=ide0
-echo "ISP is done!!!"
-qm create 101 --name "ISP" --cores 2 --memory 4096 --ostype l26 --scsihw virtio-scsi-single  --net0 virtio,bridge=vmbr7
+echo "BR-SRV is done!!!"
+qm create 101 --name "CLI" --cores 2 --memory 4096 --ostype l26 --scsihw virtio-scsi-single  --net0 virtio,bridge=vmbr7
 qm importdisk 101 ISP-disk001.vmdk $STORAGE --format qcow2
 qm set 101 -ide0 $STORAGE:101/vm-101-disk-0.qcow2 --boot order=ide0
-echo "ISP is done!!!"
+echo "CLI is done!!!"
 echo "ALL DONE!!!"
