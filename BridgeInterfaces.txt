@@ -202,7 +202,7 @@ iface vmbr81 inet manual
 #ISP-HQ-R
 
 auto vmbr82
-iface vmb8r2 inet manual
+iface vmb82 inet manual
         bridge-ports none
         bridge-stp off
         bridge-fd 0
