@@ -36,12 +36,9 @@ qm create 104 --name "SW-BR" --cores 1 --memory 1024 --ostype l26 --scsihw virti
 qm importdisk 104 SW-BR-disk001.vmdk $STORAGE --format qcow2 
 qm set 104 -ide0 $STORAGE:104/vm-104-disk-0.qcow2 --boot order=ide0
 echo "SW-BR is done!!!"
-curl -L $(yadisk-direct https://disk.yandex.ru/d/6C09s6oQ-YbqtA) -o SRV-HQ-disk001.vmdk
-curl -L $(yadisk-direct https://disk.yandex.ru/d/--CnGh-_AI5YqQ) -o 1gb.raw
-qm create 105 --name "SRV-HQ" --cores 2 --memory 4096 --ostype l26 --scsihw virtio-scsi-single  --net0 virtio,bridge=vmbr7
-qm importdisk 105 SRV-HQ-disk001.vmdk $STORAGE --format qcow2
-qm importdisk 105 1gb.raw $STORAGE --format qcow2
-qm importdisk 105 1gb.raw $STORAGE --format qcow2
+curl -L $(yadisk-direct https://disk.yandex.ru/d/RKc3dBcAuFQ4tg) -o CLI-disk001.vmdk
+qm create 105 --name "CLI" --cores 2 --memory 4096 --ostype l26 --scsihw virtio-scsi-single  --net0 virtio,bridge=vmbr7
+qm importdisk 105 CLI-disk001.vmdk $STORAGE --format qcow2
 qm set 105 -ide0 $STORAGE:105/vm-105-disk-0.qcow2 -ide1 $STORAGE:105/vm-105-disk-1.qcow2 -ide2 $STORAGE:105/vm-105-disk-2.qcow2 --boot order=ide0
-echo "SRV-HQ is done!!!"
+echo "CLI is done!!!"
 echo "ALL DONE!!!"
