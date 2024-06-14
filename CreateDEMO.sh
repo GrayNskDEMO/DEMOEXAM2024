@@ -1,5 +1,5 @@
 #!/bin/bash
-cat ./ProxmoxInterfaces.txt >> /etc/network/interfaces;
+cat ./BridgeInterfaces.txt >> /etc/network/interfaces;
 read -p "Enter number students: " Std
 for i in $(seq 1 4); do
 mkdir /etc/net/ifaces/vmbr$i ; cp ./vmbropt.txt /etc/net/ifaces/vmbr$i/options
