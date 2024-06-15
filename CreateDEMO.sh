@@ -17,7 +17,7 @@ curl -L $(yadisk-direct https://disk.yandex.ru/d/1_vGyrhtlGtQpw) -o HQ-SRV-disk0
 curl -L $(yadisk-direct https://disk.yandex.ru/d/RKc3dBcAuFQ4tg) -o CLI-disk001.vmdk
 for s in $(seq 1 10); do
 let s1=$s+10
-Vm=(${s1}1)
+Vm=(${s1})
 IntNum=vmbr$s
 qm create ${Vm}1 --name "ISP" --cores 2 --memory 2048 --ostype l26 --scsihw virtio-scsi-single  --net0 virtio,bridge=vmbr1 --net1 virtio,bridge=${IntNum}1 --net2 virtio,bridge=${IntNum}2
 qm importdisk ${Vm}1 ISP-disk001.vmdk $STORAGE --format qcow2
