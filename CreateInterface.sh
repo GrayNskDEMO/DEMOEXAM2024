@@ -8,10 +8,11 @@ echo         bridge-stp off >> /etc/network/interfaces.new;
 echo         bridge-fd 0 >> /etc/network/interfaces.new;
 echo #ISP0 >> /etc/network/interfaces.new;
 #Создание интерфейсов для виртуальных машин
-for s in $(seq 1 10); do
+for s in $(seq 1 20); do
 for i in $(seq 1 4); do
-echo auto vmbr11 >> /etc/network/interfaces.new;
-echo iface vmbr11 inet manual >> /etc/network/interfaces.new;
+IntNum=vmbr$s$i
+echo auto ${IntNum} >> /etc/network/interfaces.new;
+echo iface ${IntNum} inet manual >> /etc/network/interfaces.new;
 echo         bridge-ports none >> /etc/network/interfaces.new;
 echo         bridge-stp off >> /etc/network/interfaces.new;
 echo         bridge-fd 0 >> /etc/network/interfaces.new;
