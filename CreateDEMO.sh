@@ -1,7 +1,7 @@
 #!/bin/bash
 ./CreateInterface.sh
 mkdir /etc/net/ifaces/vmbr1 ; cp ./vmbropt.txt /etc/net/ifaces/vmbr1/options
-for s in $(seq 1 10); do
+for s in $(seq 1 20); do
 for i in $(seq 1 4); do
 mkdir /etc/net/ifaces/vmbr$s$i ; cp ./vmbropt.txt /etc/net/ifaces/vmbr$s$i/options
 done
