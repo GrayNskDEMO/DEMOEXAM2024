@@ -26,7 +26,7 @@ qm importdisk ${Vm}1 ../image/ISP-disk001.vmdk $STORAGE --format qcow2
 qm set ${Vm}1 -sata0 $STORAGE:${Vm}1/vm-${Vm}1-disk-0.qcow2 --boot order=sata0
 echo "ISP"$s" is done!!!"
 qm create ${Vm}2 --name "HQ-R" --cores 2 --memory 2048 --ostype l26 --scsihw virtio-scsi-single  --net0 virtio,bridge=${IntNum}1 --net1 virtio,bridge=${IntNum}3  
-qm importdisk ${Vm}1 ../image/ISP-disk001.vmdk $STORAGE --format qcow2
+qm importdisk ${Vm}2 ../image/ISP-disk001.vmdk $STORAGE --format qcow2
 qm set ${Vm}2 -sata0 $STORAGE:${Vm}2/vm-${Vm}2-disk-0.qcow2 --boot order=sata0
 echo "HQ-R"$s" is done!!!"
 qm create ${Vm}3 --name "BR-R" --cores 2 --memory 2048 --ostype l26 --scsihw virtio-scsi-single  --net0 virtio,bridge=${IntNum}2 --net1 virtio,bridge=${IntNum}4
