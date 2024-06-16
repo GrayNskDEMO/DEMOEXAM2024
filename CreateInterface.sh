@@ -1,7 +1,7 @@
 #!/bin/bash
 #Создание интерфейса для машины ISP0 -доступ в интернет для всех стендов
 #cat ./BridgeInterfaces.txt >> /etc/network/interfaces.new;
-echo auto vmbr1 >> /etc/network/interfaces;
+echo auto vmbr1 >> /etc/network/interfaces.new1;
 echo iface vmbr1 inet manual >> /etc/network/interfaces.new;
 echo \t\tbridge-ports none >> /etc/network/interfaces.new;
 echo "         bridge-stp off" >> /etc/network/interfaces.new;
