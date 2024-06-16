@@ -3,7 +3,7 @@
 #cat ./BridgeInterfaces.txt >> /etc/network/interfaces.new;
 echo auto vmbr1 >> /etc/network/interfaces;
 echo iface vmbr1 inet manual >> /etc/network/interfaces.new;
-echo "         bridge-ports none" >> /etc/network/interfaces.new;
+echo \t\tbridge-ports none >> /etc/network/interfaces.new;
 echo "         bridge-stp off" >> /etc/network/interfaces.new;
 echo "         bridge-fd 0" >> /etc/network/interfaces.new;
 echo \#ISP0 >> /etc/network/interfaces.new;
