@@ -17,7 +17,68 @@ systemctl restart network;
 #curl -L $(yadisk-direct https://disk.yandex.ru/d/RKc3dBcAuFQ4tg) -o CLI-disk001.vmdk
 for s in $(seq 1 20); do
 echo "Create"$s" stend!!!"
-read -p "Enter the local storage name: " STORAGE
+case $i in
+  1)
+    STORAGE=disk1;
+    ;;
+  2)
+    STORAGE=disk2;
+    ;;
+  3)
+    STORAGE=disk3;
+    ;;
+  4)
+    STORAGE=disk4;
+    ;;
+  5)
+    STORAGE=disk5;
+    ;;
+  6)
+    STORAGE=disk6;
+    ;;
+  7)
+    STORAGE=disk1;
+    ;;
+  8)
+    STORAGE=disk2;
+    ;;
+  9)
+    STORAGE=disk3;
+    ;;
+  10)
+    STORAGE=disk4;
+    ;;
+  11)
+    STORAGE=disk5;
+    ;;
+  12)
+    STORAGE=disk6;
+    ;;
+  13)
+    STORAGE=disk1;
+    ;;
+  14)
+    STORAGE=disk2;
+    ;;
+  15)
+    STORAGE=disk3;
+    ;;
+  16)
+    STORAGE=disk4;
+    ;;      
+  17)
+    STORAGE=disk5:
+    ;;
+  18)
+    STORAGE=disk6;
+    ;;
+  19)
+    STORAGE=disk1;
+    ;;
+  20)
+    STORAGE=disk2;    
+esac
+#read -p "Enter the local storage name: " STORAGE
 let s1=$s+10
 Vm=(${s1})
 IntNum=vmbr$s
