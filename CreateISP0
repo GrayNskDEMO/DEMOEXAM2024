@@ -1,0 +1,16 @@
+#!/bin/bash
+cat ./Create BridgeInterfaces1.txt  >> /etc/network/interfaces;
+mkdir /etc/net/ifaces/vmbr1 ; cp ./vmbropt.txt /etc/net/ifaces/vmbr1/options
+systemctl restart network;
+#apt-get install python3-pip python3-venv -y;
+#python3 -m venv myenv;
+#source myenv/bin/activate;
+#pip3 install wldhx.yadisk-direct;
+#read -p "Enter the local storage name: " STORAGE
+#curl -L $(yadisk-direct https://disk.yandex.ru/d/cX4HEQS4_VXOTw) -o ISP-disk001.vmdk
+read -p "Enter the local storage name: " STORAGE
+qm create 100 --name "ISP0" --cores 2 --memory 2048 --ostype l26 --scsihw virtio-scsi-single  --net0 virtio,bridge=vmbr0 --net1 virtio,bridge=vmbr1
+qm importdisk 100 ../image/ISP-disk001.vmdk $STORAGE --format qcow2
+qm set 100 -sata0 $STORAGE:100/vm-100-disk-0.qcow2 --boot order=sata0
+echo "ISP0 is done!!!"
+echo "ALL DONE!!!"
