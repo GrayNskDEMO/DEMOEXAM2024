@@ -17,7 +17,7 @@ systemctl restart network;
 #curl -L $(yadisk-direct https://disk.yandex.ru/d/RKc3dBcAuFQ4tg) -o CLI-disk001.vmdk
 for s in $(seq 1 20); do
 echo "Create"$s" stend!!!"
-case $i in
+case $s in
   1)
     STORAGE=disk1;
     ;;
