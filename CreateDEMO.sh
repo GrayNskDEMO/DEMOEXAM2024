@@ -7,14 +7,14 @@ mkdir /etc/net/ifaces/vmbr$s$i ; cp ./vmbropt.txt /etc/net/ifaces/vmbr$s$i/optio
 done
 done
 systemctl restart network;
-apt-get install python3-pip python3-venv -y;
-python3 -m venv myenv;
-source myenv/bin/activate;
-pip3 install wldhx.yadisk-direct;
-read -p "Enter the local storage name: " STORAGE
-curl -L $(yadisk-direct https://disk.yandex.ru/d/cX4HEQS4_VXOTw) -o ISP-disk001.vmdk
-curl -L $(yadisk-direct https://disk.yandex.ru/d/1_vGyrhtlGtQpw) -o HQ-SRV-disk001.vmdk
-curl -L $(yadisk-direct https://disk.yandex.ru/d/RKc3dBcAuFQ4tg) -o CLI-disk001.vmdk
+#apt-get install python3-pip python3-venv -y;
+#python3 -m venv myenv;
+#source myenv/bin/activate;
+#pip3 install wldhx.yadisk-direct;
+#read -p "Enter the local storage name: " STORAGE
+#curl -L $(yadisk-direct https://disk.yandex.ru/d/cX4HEQS4_VXOTw) -o ISP-disk001.vmdk
+#curl -L $(yadisk-direct https://disk.yandex.ru/d/1_vGyrhtlGtQpw) -o HQ-SRV-disk001.vmdk
+#curl -L $(yadisk-direct https://disk.yandex.ru/d/RKc3dBcAuFQ4tg) -o CLI-disk001.vmdk
 for s in $(seq 1 20); do
 echo "Create"$s" VM!!!"
 read -p "Enter the local storage name: " STORAGE
